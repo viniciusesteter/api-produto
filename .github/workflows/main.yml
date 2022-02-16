@@ -44,8 +44,8 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            fabricioveronez/api-bootcamp-produto:latest
-            fabricioveronez/api-bootcamp-produto:${{github.run_number}}
+            viniciusesteter/api-produto:latest
+            viniciusesteter/api-produto:${{github.run_number}}
             
   CD:
     runs-on: ubuntu-latest
@@ -71,7 +71,7 @@ jobs:
       - name: Deploy WebApi
         uses: Azure/k8s-deploy@v1.3
         with:
-          images: fabricioveronez/api-bootcamp-produto:${{github.run_number}}
+          images: viniciusesteter/api-produto:${{github.run_number}}
           manifests: |
             k8s/api/deployment.yaml
           
