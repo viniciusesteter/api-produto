@@ -14,7 +14,7 @@ provider "digitalocean" {
 resource "digitalocean_kubernetes_cluster" "k8s" {
   name   = var.nome_cluster
   region = "nyc1"
-  version = "1.21.5-do.0"
+  version = "1.21.9-do.0"
 
   node_pool {
     name       = "default"
@@ -23,14 +23,14 @@ resource "digitalocean_kubernetes_cluster" "k8s" {
   }
 }
 
-resource "digitalocean_kubernetes_node_pool" "node_critical" {
+##resource "digitalocean_kubernetes_node_pool" "node_critical" {
 
-  cluster_id = digitalocean_kubernetes_cluster.k8s.id
-  name       = "critical-pool"
-  size       = "s-2vcpu-4gb"
-  node_count = 1
+  ##cluster_id = digitalocean_kubernetes_cluster.k8s.id
+  ##name       = "critical-pool"
+  ##size       = "s-2vcpu-4gb"
+  ##node_count = 1
  
-}
+##}
 
 variable "digitalocean_token"{}
 variable "nome_cluster"{}
