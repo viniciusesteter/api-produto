@@ -1,2 +1,2 @@
-digitalocean_token="018a85a3e19a7dfa3ff77ab586b1561f72865c7ed2aa0828307b40178cf6b1ac"
+digitalocean_token="6411449d6e80a26a19238cd035153c92f5d7e5014c79474fad87846dadac6427"
 nome_cluster="k8s-jenkins"
