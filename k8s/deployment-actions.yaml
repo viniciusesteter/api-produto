@@ -54,7 +54,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: viniciusesteter/api-produto:${{github.run_number}}
+          image: viniciusesteter/api-produto:latest
           ports: 
           - containerPort: 8080
           env: 

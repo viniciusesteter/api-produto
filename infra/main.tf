@@ -19,7 +19,7 @@ resource "digitalocean_kubernetes_cluster" "k8s" {
   node_pool {
     name       = "default"
     size       = "s-2vcpu-4gb"
-    node_count = 3
+    node_count = 1
   }
 }
 
@@ -28,7 +28,7 @@ resource "digitalocean_kubernetes_node_pool" "node_critical" {
   cluster_id = digitalocean_kubernetes_cluster.k8s.id
   name       = "critical-pool"
   size       = "s-2vcpu-4gb"
-  node_count = 2
+  node_count = 1
  
 }
 
